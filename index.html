@@ -23,49 +23,58 @@
         </div>      
         <div class="left">
           <h2>Learn more about the world of Bioshock!!</h2>
-          <p> Tell me some basic info about yourself! I'm always eager to meet a fan of the game!</p>
-          <fieldset>
-            <form action="/collect.php" method="post" class="info">
-            First Name: <input type="text" id="FirstName" name="firstname"><br>
-            Last Name: <input type="text" id="LastName" name="lastname"><br>
-            <input type="submit">
-            <input type="reset" value="Reset">          
-            </fieldset>  
-            
-            
+          <p>Tell me some basic info about yourself! I'm always eager to meet a fan of the game!</p>
+        
+          <form action="/collect.php" method="post" enctype="multipart/form-data" class="info">
             <fieldset>
-              <p class="radio-title">How old are you?</p>
+              <legend>Basic Info</legend>
+              First Name: <input type="text" id="FirstName" name="firstname"><br>
+              Last Name: <input type="text" id="LastName" name="lastname"><br>
+            </fieldset>
+        
+            <fieldset>
+              <legend>How old are you?</legend>
               <ul class="radio-list">
-                <li class="radio-list-elements">
+                <li>
                   <input type="radio" id="under24" name="age" value="under24" checked>
                   <label for="under24">Under 24</label>
                 </li>
-                <li class="radio-list-elements">
+                <li>
                   <input type="radio" id="25to34" name="age" value="25-34">
                   <label for="25to34">25 to 34</label>
                 </li>
-                <li class="radio-list-elements">
+                <li>
                   <input type="radio" id="35to44" name="age" value="35-44">
                   <label for="35to44">35 to 44</label>
                 </li>
-                <li class="radio-list-elements">
+                <li>
                   <input type="radio" id="45plus" name="age" value="over45">
                   <label for="45plus">45+</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="profile-upload">
-              <form action="/client.php" method="POST" enctype="multipart/form-data" class="submit">
-                <label class="submit-text">
-                  Create a profile pic!<br>
-                  <input type="file" id="photo" name="photo">
-                </label>
-              </form>
-            </fieldset> 
-            <fieldset class="profile-upload">
-            <label class="submit-text">Let me know what your favorite color is as well!!!: <input type="color" id="favorite" name="favorite"></label><br>
+        
+            <fieldset>
+              <legend>Profile Photo</legend>
+              <label>
+                Upload a profile pic: 
+                <input type="file" id="photo" name="photo">
+              </label>
             </fieldset>
-          </div>
+        
+            <fieldset>
+              <legend>Favorite Color</legend>
+              <label>
+                Let me know your favorite color:
+                <input type="color" id="favorite" name="favorite">
+              </label>
+            </fieldset>
+        
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </form>
+        </div>
+        
         <div class="middle">
           <h2>Welcome to the 2007 classic video game of BioShock!!</h2>
         <img class="mainDad" src="/BigDaddy.jpg" alt="image of a big daddy enemy">

@@ -8,21 +8,54 @@
 </head>
 <body>
   <div class="background"></div>
-    <ul class="active">
-        <li><a href="index.html">Home Page</a></li> 
-        <li><a href="plasmid.html">Plasmids</a></li>
-        <li><a href="bdaddy.html">Big Daddy</a></li>
-        <li><a href="littlesis.html">Little Sister</a></li>
-        <li><a href="andrew.html">Andrew Ryan</a></li>
-        <li><a href="rapture.html">Rapture</a></li>
-    </ul>
+  <ul class="navbar">
+    <li><a href="index.html" class="active">Home Page</a></li> 
+    <li><a href="plasmid.html">Plasmids</a></li>
+    <li><a href="bdaddy.html">Big Daddy</a></li>
+    <li><a href="littlesis.html">Little Sister</a></li>
+    <li><a href="andrew.html">Andrew Ryan</a></li>
+    <li><a href="rapture.html">Rapture</a></li>
+  </ul>
+  
     <div class="grid-container">
         <div class="header-main">
           <h2>Would you kindly?....</h2>
         </div>      
-        <div class="left">Learn more about the world of Bioshock!!
-          <p>Bottom text under video. Possible forms??</p>
-        </div>
+        <div class="left">
+          <h2>Learn more about the world of Bioshock!!</h2>
+          <p> Tell me some basic info about yourself! I'm always eager to meet a fan of the game!</p>
+          <fieldset>
+            <form action="welcome.php" method="post" class="info">
+            First Name: <input type="text" id="FirstName" name="firstname"><br>
+            Last Name: <input type="text" id="LastName" name="lastname"><br>
+            <input type="submit">
+            <input type="reset" value="Reset">          
+            </fieldset>   <!-- 1 -->
+            
+            
+            <fieldset>
+              <p class="radio-title">How old are you?</p>
+              <ul class="radio-list">
+                <li class="radio-list-elements">
+                  <input type="radio" id="under24" name="age" value="under24" checked>
+                  <label for="under24">Under 24</label>
+                </li>
+                <li class="radio-list-elements">
+                  <input type="radio" id="25to34" name="age" value="25-34">
+                  <label for="25to34">25 to 34</label>
+                </li>
+                <li class="radio-list-elements">
+                  <input type="radio" id="35to44" name="age" value="35-44">
+                  <label for="35to44">35 to 44</label>
+                </li>
+                <li class="radio-list-elements">
+                  <input type="radio" id="45plus" name="age" value="over45">
+                  <label for="45plus">45+</label>
+                </li>
+              </ul>
+            </fieldset>
+            </div>  
+            
         <div class="middle">
           <h2>Welcome to the 2007 classic video game of BioShock!!</h2>
         <img class="mainDad" src="/BigDaddy.jpg" alt="image of a big daddy enemy">

@@ -224,41 +224,53 @@
         'footer footer footer footer footer footer';
     }
   }
+/* Nav-specific styles only affect the .navbar class */
+ul.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10; 
-  }
-  
-  li {
-    margin: 0 15px;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: green;
-  }
-  
-  .active {
-    background-color: #222;
-  }
+ul.navbar li {
+  margin: 0 15px;
+}
+
+ul.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul.navbar li a:hover:not(.active) {
+  background-color: green;
+}
+
+ul.navbar .active {
+  background-color: #222;
+}
+.radio-title{
+  text-align: left;
+}
+ul.radio-list {
+  float: left;
+}
+li.radio-list-elements{
+  list-style-type: none;
+}
+.info {
+  float: left;
+}
   
   
   .background {  

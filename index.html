@@ -16,7 +16,6 @@
     <li><a href="andrew.html">Andrew Ryan</a></li>
     <li><a href="rapture.html">Rapture</a></li>
   </ul>
-  
     <div class="grid-container">
         <div class="header-main">
           <h2>Would you kindly?....</h2>
@@ -25,13 +24,13 @@
           <h2>Learn more about the world of Bioshock!!</h2>
           <p>Tell me some basic info about yourself! I'm always eager to meet a fan of the game!</p>
         
-          <form action="/CSET3100-Website/collect.php" method="post" enctype="multipart/form-data" class="info">
+          <form name ="myForm" onsubmit="return formValidation()" action="collect.php" method="post" enctype="multipart/form-data" class="info" >
             <fieldset>
               <legend>Basic Info</legend>
               First Name: <input type="text" id="FirstName" name="firstname"><br>
               Last Name: <input type="text" id="LastName" name="lastname"><br>
             </fieldset>
-        
+          
             <fieldset>
               <legend>How old are you?</legend>
               <ul class="radio-list">
@@ -53,7 +52,7 @@
                 </li>
               </ul>
             </fieldset>
-        
+          
             <fieldset>
               <legend>Profile Photo</legend>
               <label>
@@ -61,7 +60,7 @@
                 <input type="file" id="photo" name="photo">
               </label>
             </fieldset>
-        
+          
             <fieldset>
               <legend>Favorite Color</legend>
               <label>
@@ -69,12 +68,52 @@
                 <input type="color" id="favorite" name="favorite">
               </label>
             </fieldset>
-        
+          
+            <fieldset>
+              <legend>Slave or Master?</legend>
+              <p>"A man chooses, a slave obeys..." - Andrew Ryan</p>
+              <label for="role">Which one are you?</label>
+              <input type="text" id="role" name="education" list="man-slave">
+              <datalist id="man-slave">
+                <option value="Master">
+                <option value="Slave">
+              </datalist>
+            </fieldset>
+          
+            <fieldset>
+              <legend>Satisfaction Level</legend>
+              <label for="satisfaction">How satisfied are you with this site?</label><br>  <!-- A basic for loop going from 0-10-->
+              <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" value="5" oninput="this.nextElementSibling.value = this.value">
+              <output>5</output>
+            </fieldset>
+            
+    
+           
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
+
           </form>
+          <script>
+            function formValidation(){
+              const fname=document.myForm.firstname.value;
+              const lname=document.myForm.lastname.value;
+              if(fname == null || fname=="" && lname== null || lname==""){
+                alert("Please enter your name");
+                return false;
+              }else if(fname == null || fname==""){
+                alert("First Name field is empty");
+                return false;
+              }else if(lname== null || lname==""){
+                alert("Last Name field is empty")
+                return false;
+              }else{
+      
+                return true;
+            }
+          }
+       </script>
+          
         </div>
-        
         <div class="middle">
           <h2>Welcome to the 2007 classic video game of BioShock!!</h2>
         <img class="mainDad" src="/BigDaddy.jpg" alt="image of a big daddy enemy">
